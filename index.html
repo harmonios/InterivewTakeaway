@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Interview Takeaway</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- This is the Sidebar, it has the logo and non-interactable buttons -->
+<div class="sidebar">
+  <img alt="Tyce" class="menu-icon" src="icons/tyce.png">
+  <button onclick="">
+    <img alt="" class="icon" src="icons/document.svg">
+  </button>
+  <button onclick="">
+    <img alt="" class="icon" src="icons/robot.svg">
+  </button>
+  <button onclick="">
+    <img alt="" class="icon" src="icons/chart-bar-fill.svg">
+  </button>
+  <button onclick="">
+    <img alt="" class="icon" src="icons/pie-chart.svg">
+  </button>
+</div>
+<!-- This is where the page starts up on -->
+<div class="content">
+  <!-- The notes screen, this contains content that will be swapped if the user types and enters a message -->
+  <div class="screen" id="notesScreen" style="display: block;">
+    <div class="heading-bar">
+      <h1>New Project</h1>
+    </div>
+    <div class="content-area" style="margin-top: 70px;">
+      <div class="tyce-container">
+        <img alt="Tyce" class="tyce-image" src="icons/tyce.png">
+      </div>
+      <!-- This would be the logo and other information for the mockup -->
+      <div class="intro-text">
+        <p>Hi User, I'm Tyce, your Sales Partner.<br>
+          I'm here to help you sell projects.</p>
+        <p class="subtext">What do you need assistance with today?</p>
+      </div>
+      <!-- Mock-up buttons -->
+      <div class="button-group">
+        <button class="action-button">RFP</button>
+        <button class="action-button">Pricing</button>
+        <button class="action-button">Marketing</button>
+        <button class="action-button">Contract</button>
+      </div>
+      <div class="chat-section">
+        <div class="chat-box">
+          <!-- The chat input box for the user to write inputs into, with a default value -->
+          <input class="chat-input" placeholder="Let me know how I can help you!" type="text">
+          <img alt="Send" class="send-icon" src="icons/send.png">
+        </div>
+        <div class="file-upload-box" id="drop-area">
+          <!-- This is where you can click the paperclip (more specifically) to upload documents -->
+          <p class="upload-instruction">Add documents (meeting notes, client briefings) to start a new project</p>
+          <img alt="Upload Files" class="paperclip-icon" src="icons/paperclip.png">
+          <!-- Makes it so that only .txt files can be uploaded onto the website after clicking the paperclip -->
+          <input accept=".txt" class="file-input" multiple style="display: none;" type="file">
+        </div>
+        <!-- When you attach a file, it would go here -->
+        <div class="file-list-container"></div>
+        <!-- This is a rudimentary design of the "deals" section showed in the loom video -->
+        <div class="top-deals">
+          <h3>Top deals this quarter <span>▲</span></h3>
+          <div class="deals-container">
+            <div class="deal-card">
+              <h4>App Development</h4>
+              <div class="deal-details">
+                <span>6 Deals</span>
+                <span>$1M Revenue</span>
+              </div>
+              <span class="deal-category">Banking</span>
+            </div>
+            <div class="deal-card">
+              <h4>ERP</h4>
+              <div class="deal-details">
+                <span>10 Deals</span>
+                <span>$5M Revenue</span>
+              </div>
+              <span class="deal-category">Banking</span>
+            </div>
+            <div class="deal-card">
+              <h4>AI POCs</h4>
+              <div class="deal-details">
+                <span>7 Deals</span>
+                <span>$500K Revenue</span>
+              </div>
+              <span class="deal-category">Industrial</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- After the user inputs, then presses enter or the chat button, it swaps the content to this screen -->
+  <div class="screen" id="chatScreen" style="display: none;">
+    <div class="heading-bar">
+      <h1>New Project</h1>
+    </div>
+    <!-- This is the area for chat messages -->
+    <div class="chat-messages" id="chatMessages">
+    </div>
+    <div class="chat-section">
+      <!-- Like above this is for the chat input -->
+      <div class="chat-box">
+        <input class="chat-input" placeholder="Type a message..." type="text">
+        <img alt="Send" class="send-icon" src="icons/send.png">
+      </div>
+      <div class="file-upload-box">
+        <p class="upload-instruction">Add documents (meeting notes, client briefings) to start a new project</p>
+        <img alt="Upload Files" class="paperclip-icon" src="icons/paperclip.png">
+        <input accept=".txt" class="file-input" multiple style="display: none;" type="file">
+      </div>
+      <div class="file-list-container"></div>
+    </div>
+  </div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
